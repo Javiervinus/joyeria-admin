@@ -1,0 +1,44 @@
+<header>
+    <h1 class="site-heading text-center text-faded d-none d-lg-block">
+        <span class="site-heading-upper text-primary mb-3">Plata-Acero-Semijoyas</span>
+        <span class="site-heading-lower" [routerLink]="['noticias']">Marley Joyería</span>
+    </h1>
+</header>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container" data-title="Bienvenidos"
+        data-intro="Aquí se muestran todas las secciones de nuestra página web">
+        <a class="navbar-brand text-uppercase fw-bold d-lg-none">Marley Joyería</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item px-lg-4"
+                    data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
+                    <a class="nav-link text-uppercase" [routerLink]="['noticias']">Noticias</a>
+                </li>
+                <li class="nav-item px-lg-4"
+                    data-intro="Aquí podrá encontrar una sección por si tienes dudas y desea contactarnos!">
+                    <a class="nav-link text-uppercase" href="contacto.html">Contáctanos</a>
+                </li>
+                <li class="nav-item px-lg-4"
+                    data-intro="Un poco de descripción y precios acerca de los productos con los que contamos, echales un vistazo!">
+                    <a class="nav-link text-uppercase" href="principal.html">Principal</a>
+                </li>
+                <li class="nav-item px-lg-4"
+                    data-intro="Un poco de información acerca de los desarroladores de la página">
+                    <a class="nav-link text-uppercase" href="desarrollo.html">Equipo de Desarrollo</a>
+                </li>
+                <li class="nav-item px-lg-4" data-intro="Aquí pódra encontrar los horarios de atención que tenemos!">
+                    <a class="nav-link text-uppercase" href="horario.html">Horarios</a>
+                </li>
+                <li class="nav-item px-lg-4" data-intro="Un poco de mayor información acerca de nuestra joyería!">
+                    <a class="nav-link text-uppercase" href="acercaDe.html">Acerca De</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
