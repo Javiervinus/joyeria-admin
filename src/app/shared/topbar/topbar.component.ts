@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RequestService } from 'src/app/services/request.service';
 
 @Component({
   selector: 'app-topbar',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class TopbarComponent implements OnInit {
   public isCollapsed = true;
 
-  constructor() { }
+  constructor(public requestServ: RequestService) { }
 
   ngOnInit(): void {
   }

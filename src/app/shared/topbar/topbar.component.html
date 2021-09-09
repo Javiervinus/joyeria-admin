@@ -3,6 +3,10 @@
         <span class="site-heading-upper text-primary mb-3">Plata-Acero-Semijoyas</span>
         <span class="site-heading-lower" [routerLink]="['noticias']">Marley Joyería</span>
     </h1>
+    <div style="text-align: end;">
+        <h4>Bienvenido {{requestServ.nombre}} </h4>
+    </div>
+
 </header>
 <!-- Navigation-->
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -16,9 +20,13 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent" [ngbCollapse]="isCollapsed">
             <ul class="navbar-nav mx-auto">
-                <li class="nav-item px-lg-4"
+                <li *ngIf="!requestServ.master" class="nav-item px-lg-4"
                     data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
                     <a class="nav-link text-uppercase" [routerLink]="['iniciarSesion']">Iniciar Sesion</a>
+                </li>
+                <li *ngIf="requestServ.master" class="nav-item px-lg-4" style="cursor: pointer;"
+                    data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
+                    <a class="nav-link text-uppercase" (click)="requestServ.cerrarSesion()">Cerrar Sesion</a>
                 </li>
                 <li class="nav-item px-lg-4"
                     data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
@@ -42,6 +50,7 @@
                 <li class="nav-item px-lg-4" data-intro="Un poco de mayor información acerca de nuestra joyería!">
                     <a class="nav-link text-uppercase" [routerLink]="['acercaDe']">Acerca De</a>
                 </li>
+
             </ul>
         </div>
     </div>

@@ -1,26 +1,31 @@
-<div class="card text-center">
-    <div class="contenedor-formularios">
-        <div id="iniciar-sesion">
-            <h1>Iniciar Sesión</h1>
-            <form action="#" method="post">
-                <div class="contenedor-input">
-                    <label>
-                        Usuario:
-                    </label>
-                    <input style="text-align: right;" type="text" required>
-                </div>
+<div class="row justify-content-center">
+    <div class="col-12">
+        <div class="card text-center">
+            <div class="contenedor-formularios">
+                <div id="iniciar-sesion">
+                    <h1>Iniciar Sesión</h1>
+                    <div class="contenedor-input">
+                        <label>
+                            Correo:
+                        </label>
+                        <input style="text-align: right;" [(ngModel)]="login.email" type="text" required>
+                    </div>
 
-                <div class="contenedor-input">
-                    <label>
-                        Contraseña:
-                    </label>
-                    <input style="text-align: right;" type="password" required>
+                    <div class="contenedor-input">
+                        <label>
+                            Contraseña:
+                        </label>
+                        <input style="text-align: right;" [(ngModel)]="login.password" type="password" required>
+                    </div>
+                    <button class="btn btn-primary" style="background-color: #157278;" (click)="onLoggedin()">Iniciar
+                        Sesion</button>
                 </div>
-                <input type="submit" class="button button-block" value="Iniciar Sesión">
-            </form>
+            </div>
         </div>
     </div>
 </div>
+
+
 
 <!-- Registrarse -->
 <!-- <div id="registrarse">

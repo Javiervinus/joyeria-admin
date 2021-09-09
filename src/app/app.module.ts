@@ -13,6 +13,10 @@ import { ProductosComponent } from './pages/productos/productos.component';
 import { DesarrolladoresComponent } from './pages/desarrolladores/desarrolladores.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { IniciarSesionComponent } from './pages/iniciar-sesion/iniciar-sesion.component';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
+import 'jspdf-autotable';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -29,8 +33,10 @@ import { IniciarSesionComponent } from './pages/iniciar-sesion/iniciar-sesion.co
   ],
   imports: [
     NgbModule,
+    FormsModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
