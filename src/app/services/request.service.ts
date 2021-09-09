@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
@@ -62,6 +62,32 @@ export class RequestService {
           }
         );
     });
+  }
+  async getProductos() {
+    this.loading = true;
+    if (!this.master.token) {
+      this.loading = false;
+      this.router.navigateByUrl("/login");
+    } else {
+      this.loading = true;
+      const headers = new HttpHeaders({ token: this.master.token });
+      return new Promise((resolve) => {
+        this.http
+          .get(`${environment.apiUrl}/producto`, { headers })
+          .subscribe(
+            (response: any) => {
+              this.loading = false;
+              resolve([true, response.data]);
+            },
+            (error: any) => {
+              this.loading = false;
+              if (!this.tokenIsValid(error.status)) {
+              }
+              resolve([false]);
+            }
+          );
+      });
+    }
   }
 
 }
