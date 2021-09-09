@@ -8,6 +8,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './pages/home/home.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { HorarioComponent } from './pages/horario/horario.component';
+import { ProductosComponent } from './pages/productos/productos.component';
+import { DesarrolladoresComponent } from './pages/desarrolladores/desarrolladores.component';
+import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
+import { IniciarSesionComponent } from './pages/iniciar-sesion/iniciar-sesion.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +21,11 @@ import { NgbCollapseModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FooterComponent,
     HomeComponent,
     NoticiasComponent,
+    HorarioComponent,
+    ProductosComponent,
+    DesarrolladoresComponent,
+    AcercaDeComponent,
+    IniciarSesionComponent
   ],
   imports: [
     NgbModule,

@@ -18,25 +18,29 @@
             <ul class="navbar-nav mx-auto">
                 <li class="nav-item px-lg-4"
                     data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
+                    <a class="nav-link text-uppercase" [routerLink]="['iniciarSesion']">Iniciar Sesion</a>
+                </li>
+                <li class="nav-item px-lg-4"
+                    data-intro="Aquí se muestran las últimas noticias de la joyería, joyas entre otros">
                     <a class="nav-link text-uppercase" [routerLink]="['noticias']">Noticias</a>
                 </li>
                 <li class="nav-item px-lg-4"
                     data-intro="Aquí podrá encontrar una sección por si tienes dudas y desea contactarnos!">
-                    <a class="nav-link text-uppercase" href="contacto.html">Contáctanos</a>
+                    <a class="nav-link text-uppercase" [routerLink]="['contactenos']">Contáctanos</a>
                 </li>
                 <li class="nav-item px-lg-4"
                     data-intro="Un poco de descripción y precios acerca de los productos con los que contamos, echales un vistazo!">
-                    <a class="nav-link text-uppercase" href="principal.html">Principal</a>
+                    <a class="nav-link text-uppercase" [routerLink]="['productos']">Productos</a>
                 </li>
                 <li class="nav-item px-lg-4"
                     data-intro="Un poco de información acerca de los desarroladores de la página">
-                    <a class="nav-link text-uppercase" href="desarrollo.html">Equipo de Desarrollo</a>
+                    <a class="nav-link text-uppercase" [routerLink]="['desarrolladores']">Equipo de Desarrollo</a>
                 </li>
                 <li class="nav-item px-lg-4" data-intro="Aquí pódra encontrar los horarios de atención que tenemos!">
-                    <a class="nav-link text-uppercase" href="horario.html">Horarios</a>
+                    <a class="nav-link text-uppercase" [routerLink]="['horario']">Horarios</a>
                 </li>
                 <li class="nav-item px-lg-4" data-intro="Un poco de mayor información acerca de nuestra joyería!">
-                    <a class="nav-link text-uppercase" href="acercaDe.html">Acerca De</a>
+                    <a class="nav-link text-uppercase" [routerLink]="['acercaDe']">Acerca De</a>
                 </li>
             </ul>
         </div>
